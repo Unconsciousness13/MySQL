@@ -7,4 +7,8 @@ CREATE TABLE `employees` (
     `name` VARCHAR(50) NOT NULL
 );
 
+#insert col value
+INSERT INTO employees (`name`)
+VALUES ('Ivan');
+
 
