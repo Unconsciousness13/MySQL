@@ -38,3 +38,48 @@ UPDATE `gamebar`.`employees` SET `first_name` = 'Ivancho' WHERE (`id` = '1');
 DELETE FROM `gamebar`.`employees` WHERE (`id` = '2');
 
 
+
+
+## CREATE TABLES LAB 
+#1
+/* 
+CREATE DATABASE `gamebar`;
+USE `gamebar`; */
+
+CREATE TABLE `employees` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `first_name` VARCHAR(30) NOT NULL,
+    `last_name` VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE `categories`(
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE `products` (
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name`  VARCHAR(40) NOT NULL,
+    `category_id` INT NOT NULL
+);
+
+#2
+INSERT INTO `employees`
+VALUES
+(1,'Pesho', 'Peshov'),
+(2,'Pesho1', 'Peshov'),
+(3,'Pesho2', 'Peshov');
+
+#3 
+ALTER TABLE `employees`
+ADD COLUMN `middle_name` VARCHAR(20);
+
+#4
+ALTER TABLE `products`
+ADD CONSTRAINT fk_products_categories
+FOREIGN KEY (`category_id`) REFERENCES `categories`(`id`);
+
+#5
+ALTER TABLE `employees`
+	MODIFY middle_name varchar(100) NULL;
+
