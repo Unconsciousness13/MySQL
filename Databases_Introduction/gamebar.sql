@@ -25,3 +25,11 @@ CREATE TABLE people
     first_name VARCHAR(50),
     last_name VARCHAR(50)
 );
+
+#retrive records in sql
+
+#get all information
+SELECT * FROM employees;
+# limit info
+SELECT first_name, last_name FROM employees
+LIMIT 5;
