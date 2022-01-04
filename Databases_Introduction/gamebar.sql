@@ -12,3 +12,6 @@ INSERT INTO employees (`name`)
 VALUES ('Ivan');
 
 
+#view all data in table employees
+SELECT * 
+FROM employees
