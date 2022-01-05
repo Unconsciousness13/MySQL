@@ -1,6 +1,9 @@
 # DELETING ONLY THE STORE INFORMATION IN TABLE WITHOUT THE TABLE
 	
 	TRUNCATE `minions`;
-
+	
+# Deleting  table 
+	DROP TABLE or TABLES `table_name`;
+	
 # EDITING
 	UPDATE `minions`.`minions` SET `name` = 'Steward' WHERE (`id` = '3');
