@@ -1,3 +1,6 @@
+# DELETING ONLY THE STORE INFORMATION IN TABLE WITHOUT THE TABLE
+	
+	TRUNCATE `minions`;
 
 # EDITING
-UPDATE `minions`.`minions` SET `name` = 'Steward' WHERE (`id` = '3');
+	UPDATE `minions`.`minions` SET `name` = 'Steward' WHERE (`id` = '3');
