@@ -44,11 +44,11 @@ VALUES
 
 INSERT INTO `departments`(`name`)
 VALUES
-('Engeneering'),
+('Engineering'),
 ('Sales'),
 ('Marketing'),
 ('Software Development'),
-('Quality Assurance')
+('Quality Assurance');
 
 
 INSERT INTO `employees` (`id`, `first_name`, `middle_name`, `last_name`,`job_title`, `salary`,`department_id`, `hire_date`, `address_id` )
