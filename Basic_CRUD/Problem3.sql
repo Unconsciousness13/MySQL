@@ -1,6 +1,6 @@
-UPDATE `employees` 
+ALTER TABLE `employees` 
 SET 
-    `salary` = `salary` + '100'
+    `salary` = `salary` + 100
 WHERE
     `job_title` = 'Manager';
  
