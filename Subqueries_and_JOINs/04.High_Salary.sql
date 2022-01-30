@@ -1,12 +1,11 @@
 SELECT
-    e.employee_id,
-    CONCAT(first_name, '', last_name) AS 'full_name',
-    d.department_id,
-    d.name
+    COUNT(e.employee_id) AS 'count'
 FROM
     employees AS e
-    RIGHT JOIN departments AS d ON d.manager_id = e.employee_id
-ORDER BY
-    e.employee_id
-LIMIT
-    5;
+WHERE
+    e.salary > (
+        SELECT
+            AVG(salary) AS 'average_salary'
+        FROM
+            employees
+    );
