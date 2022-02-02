@@ -8,8 +8,3 @@ CREATE FUNCTION ufn_count_employees_by_town(town_name VARCHAR(20)) RETURNS INT R
     WHERE
         t.name = town_name
 );
-
-SELECT
-    ufn_count_employees_by_town('Sofia') AS 'count';
-
-DROP FUNCTION IF EXISTS ufn_count_employees_by_town;
