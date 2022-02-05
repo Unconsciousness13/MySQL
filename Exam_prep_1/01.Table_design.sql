@@ -45,12 +45,12 @@ CREATE TABLE `players`(
     `position` CHAR(1) NOT NULL,
     `salary` DECIMAL(10, 2) NOT NULL DEFAULT 0,
     `hire_date` DATETIME,
-    `skill_data_id` INT NOT NULL,
+    `skills_data_id` INT NOT NULL,
     -- skill datas
-    `team_id` INT NOT NULL,
+    `team_id` INT,
     -- teams
     CONSTRAINT fk_team_id_teams FOREIGN KEY (team_id) REFERENCES teams(id),
-    CONSTRAINT fk_skill_data_id_skills_data FOREIGN KEY (skill_data_id) REFERENCES skills_data(id)
+    CONSTRAINT fk_skills_data_id_skills_data FOREIGN KEY (skills_data_id) REFERENCES skills_data(id)
 );
 
 CREATE TABLE `coaches`(
