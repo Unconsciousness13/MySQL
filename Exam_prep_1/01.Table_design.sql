@@ -9,3 +9,13 @@ CREATE TABLE `towns`(
     `country_id` INT NOT NULL,
     CONSTRAINT fk_towns_countries FOREIGN KEY (country_id) REFERENCES countries(id)
 );
+
+CREATE TABLE `stadiums`(
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(45) NOT NULL,
+    `capacity` INT NOT NULL,
+    `town_id` INT NOT NULL,
+    CONSTRAINT fk_stadiums_towns
+    FOREIGN KEY (town_id)
+    REFERENCES towns(id)
+);
