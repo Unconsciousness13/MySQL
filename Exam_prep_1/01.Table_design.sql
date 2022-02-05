@@ -29,7 +29,7 @@ CREATE TABLE `teams`(
 
 CREATE TABLE skills_data(
     `id` INT PRIMARY KEY AUTO_INCREMENT,
-    `dribling` INT NOT NULL DEFAULT 0,
+    `dribbling` INT NOT NULL DEFAULT 0,
     `pace` INT NOT NULL DEFAULT 0,
     `passing` INT NOT NULL DEFAULT 0,
     `shooting` INT NOT NULL DEFAULT 0,
