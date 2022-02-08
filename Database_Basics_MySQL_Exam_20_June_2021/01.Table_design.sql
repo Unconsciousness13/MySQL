@@ -44,3 +44,10 @@ CREATE TABLE `courses`(
     CONSTRAINT fk_courses_cars FOREIGN KEY (car_id) REFERENCES cars(id),
     CONSTRAINT fk_courses_clients FOREIGN KEY (client_id) REFERENCES clients(id)
 );
+
+CREATE TABLE cars_drivers (
+    `car_id` INT NOT NULL,
+    `driver_id` INT NOT NULL,
+    CONSTRAINT fk_car_drivers_cars FOREIGN KEY (car_id) REFERENCES cars(id),
+    CONSTRAINT fk_car_drivers_drivers FOREIGN KEY (driver_id) REFERENCES drivers(id)
+);
