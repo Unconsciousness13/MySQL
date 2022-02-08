@@ -1,0 +1,11 @@
+CREATE TABLE `addresses`(
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE `clients`(
+	`id` INT PRIMARY KEY AUTO_INCREMENT,
+    `full_name` VARCHAR(50) NOT NULL,
+    `phone_number` VARCHAR(20) NOT NULL
+);
+
